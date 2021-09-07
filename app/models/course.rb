@@ -6,9 +6,11 @@ has_many :users, through: :favorites
 has_many :comments
 has_many :users, through: :comments
 
+validates :description, presence: true,
+length: { in: 3..2000 }
 
 validates :title, presence: true,
-length: {minimum: 3}
+length: { in: 3..140 }
 
 validates :price, presence: true
 
@@ -17,12 +19,10 @@ numericality: { greater_than_or_equal_to: 0 }
 
 validates :start_date, presence: true
 
-validates :is_remote, presence: true
-
 validates :duration_scale, presence: true
 
 validates :adress, presence: true,
-length: {minimum: 5}
+length:{ in: 3..300 }
 
 validates :zip_code, presence: true
 
