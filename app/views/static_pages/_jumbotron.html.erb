@@ -6,10 +6,10 @@
       <br>
       <h1 class="align-center display-4">Formatech</h1>
       <hr class="text-dark">
-      <p class="text-dark">Welcome <% if user_signed_in? %> <%=@user.nickName%> <%end %> to our brand new checkpoint ! <br>Find the perfect course thanks to our amazing catalog !</p>
+      <p class="text-dark">Welcome <% if user_signed_in? %> <%=@user.nickname%> <%end %> to our brand new checkpoint ! <br>Find the perfect course thanks to our amazing catalog !</p>
       <br>
     <% if user_signed_in?%>
-      <a class="btn btn-primary btn-lg" id="button-jumbotron"<%= link_to 'Take a look !', items_path %></a>
+      <a class="btn btn-primary btn-lg" id="button-jumbotron"<%= link_to 'Take a look !', courses_path %></a>
     <% else %>
       <a class="btn btn-primary btn-lg" <%= link_to "Sign in !", new_user_session_path %></a>
     <% end %>
