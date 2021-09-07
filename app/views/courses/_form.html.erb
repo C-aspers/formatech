@@ -66,6 +66,12 @@
     <%= form.text_field :duration_scale %>
   </div>
 
+
+ <div class="field">
+    <%= form.label 'Picture', :class => 'button hollow', :for => 'pic' %>
+    <%= form.file_field :picture, :class => 'show-for-sr', :id => 'pic' %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

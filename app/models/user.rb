@@ -17,4 +17,6 @@ length: {maximum: 20}
 
 validates :image_url, presence: true
 
+has_one_attached :picture
+
 end
