@@ -29,8 +29,10 @@ instructor = Instructor.create!(email: "audrey@test.com", nickname: "audrey99", 
 instructor = Instructor.create!(email: "bruno@test.com", nickname: "bruno99", password: "password", siret: Faker::Number.number(digits: 14), website: "https://fr.wikipedia.org/wiki/Michel_Cr%C3%A9mad%C3%A8s#/media/Fichier:Michel_Cremades.jpg", description: Faker::Lorem.characters(number: rand(25..1000)), image_url: "https://cdn1.vente-unique.com/thumbnails/product/105/105689/full_size/xs/bureau_345305.jpg")
 
 
-20.times do |x|
-  course = Course.create!(title: Faker::Lorem.characters(number: rand(15..1000)), price: rand(0..9999), has_diploma: rand(false..true), description: Faker::Lorem.characters(number: rand(50..2000)), is_remote: rand(false..true), adress: Faker::Address.street_address, zip_code: Faker::Address.zip_code, image_url: "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/XPS/17_9700_non-touch/xs9700nt_cnb_00055lf110_gy.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=701&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=701,402")
+20.times do
+  random_boolean = [true, false].sample
+  random_scale = ["hour", "week", "month", "year"].sample
+  course = Course.create!(title: Faker::Lorem.characters(number: rand(15..140)), price: rand(0..9999), has_diploma: random_boolean, description: Faker::Lorem.characters(number: rand(50..2000)), is_remote: random_boolean, adress: Faker::Address.street_address, zip_code: Faker::Address.zip_code, start_date: Faker::Date.forward(days: rand(5..350)), duration: rand(0..12), duration_scale: random_scale, image_url: "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/XPS/17_9700_non-touch/xs9700nt_cnb_00055lf110_gy.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=701&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=701,402")
 end
 
 
