@@ -55,5 +55,20 @@
   <%= @course.duration_scale %>
 </p>
 
+<h3>Picture</h3>
+	<%if @course.picture.attached?%>
+ 		 <%= image_tag @course.picture, alt: 'image' %>
+	<%else%>
+  		<p>=== There aren't any pictures linked to this item yet ===</p>
+	<%end%>
+
+  <h3>Add or modify the picture ?</h3>
+  <%= form_tag course_picture_path(@course), multipart: true, :method => :patch  do %>
+    <%= file_field_tag :picture %>
+    <%= submit_tag "mettre à jour" %>
+	<%end%>
+
+
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
