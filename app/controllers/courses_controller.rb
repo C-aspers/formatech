@@ -8,6 +8,10 @@ class CoursesController < ApplicationController
 
   # GET /courses/1 or /courses/1.json
   def show
+    # comment_array = []
+    # comment_array = Comment.all.select { |m| m.course_id == 2 }
+    # .find_by_course_id(2)
+    # @comments = Comment.find_by_course_id(2)
   end
 
   # GET /courses/new
