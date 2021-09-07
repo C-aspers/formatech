@@ -22,9 +22,6 @@
             <div class="dropdown-menu dropdown-menu-right">                
               <a class="dropdown-item" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
               <a class="dropdown-item"  <%= link_to "profile", user_path(current_user) %></a>
-              <% if check_if_admin(current_user) %>
-                <a class="dropdown-item"  <%= link_to "admin", is_admin_index_path %></a>
-              <% end %>
             </div>  
           </li>
         <% elsif instructor_signed_in? %>
@@ -32,7 +29,7 @@
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
             <div class="dropdown-menu dropdown-menu-right">                
               <a class="dropdown-item" <%= link_to "Sign out", destroy_instructor_session_path, method: :delete %></a>
-              <a class="dropdown-item"  <%= link_to "profile", instructor_path(current_user) %></a>
+              <a class="dropdown-item"  <%= link_to "profile", instructor_path(current_instructor) %></a>
             </div>  
           </li>
         <% else %>
