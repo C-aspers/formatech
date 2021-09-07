@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @course.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @course.price %>
+</p>
+
+<p>
+  <strong>Has diploma:</strong>
+  <%= @course.has_diploma %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Is remote:</strong>
+  <%= @course.is_remote %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @course.adress %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @course.zip_code %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @course.image_url %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @course.duration %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @course.start_date %>
+</p>
+
+<p>
+  <strong>Duration scale:</strong>
+  <%= @course.duration_scale %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
