@@ -1,0 +1,18 @@
+
+<div class="jumbotron"> 
+  <div class="container">
+    <br>
+      <p class="display-4" id="notice"><%= notice %></p>
+      <br>
+      <h1 class="align-center display-4">Formatech</h1>
+      <hr class="text-dark">
+      <p class="text-dark">Welcome <% if user_signed_in? %> <%=@user.nickName%> <%end %> to our brand new checkpoint ! <br>Find the perfect course thanks to our amazing catalog !</p>
+      <br>
+    <% if user_signed_in?%>
+      <a class="btn btn-primary btn-lg" id="button-jumbotron"<%= link_to 'Take a look !', items_path %></a>
+    <% else %>
+      <a class="btn btn-primary btn-lg" <%= link_to "Sign in !", new_user_session_path %></a>
+    <% end %>
+    </p>
+  </div>
+</div>
