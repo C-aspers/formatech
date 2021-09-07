@@ -27,4 +27,7 @@ length:{ in: 3..300 }
 validates :zip_code, presence: true
 
 validates :image_url, presence: true
+
+has_one_attached :picture
+
 end

@@ -21,4 +21,7 @@ validates :description, presence: true,
 length: { in: 15..1000 }
 
 validates :image_url, presence: true
+
+has_one_attached :picture
+
 end

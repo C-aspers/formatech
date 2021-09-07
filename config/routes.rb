@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   
+=======
+  root "static_pages#index" 
+>>>>>>> develop
   resources :comments
   
   resources :favorites
