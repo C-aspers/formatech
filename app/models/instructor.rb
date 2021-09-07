@@ -18,7 +18,7 @@ length: { is: 14 }
 validates :website, presence: true
 
 validates :description, presence: true,
-length: { in: 15..140 }
+length: { in: 15..1000 }
 
 validates :image_url, presence: true
 end
