@@ -7,11 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://kit.fontawesome.com/6773662ef5.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-  <%= render "navbar" %>
+  <%= render "layouts/navbar" %>
     <%= yield %>
-    <%= render "footer" %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
